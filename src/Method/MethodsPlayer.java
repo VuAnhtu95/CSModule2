@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class MethodsPlayer {
     static ArrayList<Player> players = new ArrayList<>();
-    final String PATH = "C:\\Users\\TTC\\Desktop\\Case\\src\\Player.dat";
+    final String PATH = "C:\\Users\\TTC\\Desktop\\CaseStudy2\\src\\Player.dat";
     Scanner scanner = new Scanner(System.in);
     public MethodsPlayer(){
         players = (ArrayList<Player>) ReadAndWrite.readFromFile(PATH);

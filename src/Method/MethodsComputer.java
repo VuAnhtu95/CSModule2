@@ -3,7 +3,7 @@ import Manage.Computer;
 import java.util.ArrayList;
 public class MethodsComputer {
     static ArrayList<Computer> computers = new ArrayList<>();
-    final String PATH = "C:\\Users\\TTC\\Desktop\\Case\\src\\Computer.dat";
+    final String PATH = "C:\\Users\\TTC\\Desktop\\CaseStudy2\\src\\Computer.dat";
     public MethodsComputer(){
         computers = (ArrayList<Computer>) ReadAndWrite.readFromFile(PATH);
     }

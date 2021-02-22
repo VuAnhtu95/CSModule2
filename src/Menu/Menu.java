@@ -33,10 +33,10 @@ public class Menu {
                     }
                     case 2->{
                         if (methods.checkAccount()){
+                            System.out.println("Đăng nhập thành công!" + "\n");
                             startMenu:
                             do {
                                 try {
-                                    System.out.println("Đăng nhập thành công!" + "\n");
                                     System.out.println("--------Menu--------");
                                     System.out.println("1: Quản Lý Người Chơi ");
                                     System.out.println("2: Quản Lý Máy Tính ");

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class MethodsBill {
     static ArrayList<Bill> bills = new ArrayList<>();
-    final String PATH = "C:\\Users\\TTC\\Desktop\\Case\\src\\Bill.dat";
+    final String PATH = "C:\\Users\\TTC\\Desktop\\CaseStudy2\\src\\Bill.dat";
     public MethodsBill(){
         bills = (ArrayList<Bill>) ReadAndWrite.readFromFile(PATH);
     }

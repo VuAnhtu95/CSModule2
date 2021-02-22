@@ -2,14 +2,13 @@ package Method;
 
 import Manage.Account;
 import Manage.Bill;
-
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MethodsAccount {
     static ArrayList<Account> accounts;
-    static final String PATH = "C:\\Users\\TTC\\Desktop\\Case\\src\\Account.dat";
+    static final String PATH = "C:\\Users\\TTC\\Desktop\\CaseStudy2\\src\\Account.dat";
     public MethodsAccount(){
     }
     public void add(Account account){
