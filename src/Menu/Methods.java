@@ -1,21 +1,17 @@
 package Menu;
 
-import Manage.Bill;
-import Manage.Computer;
-import Manage.Player;
-import Manage.Services;
+import Manage.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import Method.MethodsServices;
-import Method.MethodsPlayer;
-import Method.MethodsComputer;
-import Method.MethodsBill;
+
+import Method.*;
 
 public class Methods {
     MethodsBill methodsBill = new MethodsBill();
     MethodsComputer methodsComputer = new MethodsComputer();
     MethodsPlayer methodsPlayer = new MethodsPlayer();
+    MethodsAccount methodsAccount = new MethodsAccount();
     int id = 1;
     Scanner scanner = new Scanner(System.in);
     public Computer getInfoComputer(){
@@ -100,5 +96,39 @@ public class Methods {
         bill.setPricesServices(result);
         bill.setCaculate(bill.getTime(),result);
         return bill;
+    }
+    public Account getAccount(){
+        String idAcccount = "";
+        Account account = new Account();
+        boolean checkId = false;
+        while (!checkId){
+            System.out.println("Id: ");
+            idAcccount = scanner.nextLine();
+            checkId = methodsAccount.checkId(idAcccount);
+            if (!checkId){
+                System.err.println("Id này đã có rồi. Bạn nhập lại nhé!");
+            }
+        }
+        account.setId(idAcccount);
+        System.out.println("Password: ");
+        String passWord = scanner.nextLine();
+        if (MethodsAccount.checkPass(passWord)){
+            account.setPassWord(passWord);
+        }else {
+            System.out.println("Pass không đúng định dạng ");
+            getAccount();
+        }
+
+        return account;
+    }
+    public boolean checkAccount(){
+        boolean a = false;
+        System.out.println("Đăng Nhập");
+        System.out.println("Id: ");
+        String id = scanner.nextLine();
+        System.out.println("Password: ");
+        String passWord = scanner.nextLine();
+        a = methodsAccount.checkId(id,passWord);
+        return a;
     }
 }

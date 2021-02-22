@@ -65,7 +65,7 @@ public class Computer implements Serializable {
         for (int i = 0; i < services.size(); i++) {
             result += " + Dịch vụ số " + services.get(i).getId() + "\n" +
                       " + Tên dịch vụ " + services.get(i).getNameServices() + "\n" +
-                      " + Giá dịch vụ " + services.get(i).getPrices() + "\n";
+                      " + Giá dịch vụ " + services.get(i).getPrices() + " đồng" + "\n";
         }
         return result;
     }
